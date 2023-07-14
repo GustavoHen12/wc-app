@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <link rel="icon" type="image/x-icon" href="./assets/wecare.ico">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="./index.js" type="module"></script>
+
+        <title>We Care Movement</title>
+    </head>
+    <body>
+        <div class="body">
+            <div class="default-margin header">
+                <h1 class="header-text">We Care Movement</h1>
+                <img class="logo" src="/assets/wecare.svg">
+            </div>
+            <div class="container">
+                <div class="default-margin">
+                    <h2>Conheça</h2>
+                    <p>A We Care Movement é um movimento de jovens cristãos que buscam se importar com as expectativas dos céus e revelar Cristo as nações.</p>
+                </div>
+                <div class="carousel">
+                    <div class="card" style="background-image: url(./assets/areas/oracao.jpeg);background-repeat: no-repeat;background-size: cover;"></div>                
+                    <div class="card" style="background-image: url(./assets/areas/couples.jpeg);background-repeat: no-repeat;background-size: cover;"></div>                
+                    <div class="card" style="background-image: url(./assets/areas/all.jpeg);background-repeat: no-repeat;background-size: cover;"></div>                
+                    <div class="card" style="background-image: url(./assets/areas/store.jpeg);background-repeat: no-repeat;background-size: cover;"></div>                
+                    <div class="card" style="background-image: url(./assets/areas/kids.jpeg);background-repeat: no-repeat;background-size: cover;"></div>                
+                    <div class="card" style="background-image: url(./assets/areas/uni.png);background-repeat: no-repeat;background-size: cover;"></div>                
+                </div>
+            </div>
+            <div class="default-margin container center">                
+                <h2>Eventos</h2>
+                <button id="visitante_btn" class="btn black-btn">sou visitante</button>
+            </div>
+
+            <div class="default-margin container center">                
+                <h2>We Care na web</h2>
+                <button class="btn white-btn color-gradient" onclick="abreLink('https:\/\/www.instagram.com/wecaremvmnt/')"><span class='insta-icon'></span>@wecaremvmnt</button>
+                <button class="btn white-btn red-gradient"   onclick="abreLink('https:\/\/www.youtube.com/@WeCareMovement')"><span class='youtube-icon'></span>/wecaremvmnt</button>
+                <button class="btn white-btn gray-gradiente" onclick="abreLink('https:\/\/wecaremovement.com.br/')"><span class='site-icon'></span>wecaremovement</button>
+                <div class="playlist" onclick="abreLink('https:\/\/youtu.be/MeX0yHMs9Nk')"></div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p>Se é a sua primeira vez, primeiramente seja bem-vindo ! Nós oramos e intercedemos por sua vida, e sabemos que você não está aqui por acaso!</p>
+                  <p>Gostaríamos te conhecer um pouco mais, preencha as informações abaixo para que a gente consiga te conhecer um pouco mais</p>
+                  <form id="form_visitantes">
+                    <label for="nome">Qual seu nome ?</label>
+                    <input type="text" id="nome" name="nome"><br><br>
+                    <label for="telefone">Qual seu telefone ?</label>
+                    <input type="text" id="telefone" name="telefone"><br><br>
+                    <input type="submit" class="btn black-btn" value="enviar">
+                  </form>
+                  <p class="erro"></p>
+                </div>
+              </div>
+
+            <div class="footer">
+                
+            </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $('.carousel').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                    breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <script>
+        // Função
+        function abreLink(url){
+            window.open(url, '_blank').focus();
+        }
+
+        // Modal
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("visitante_btn");
+        var span = document.getElementsByClassName("close")[0];
+        
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Mascára para input de telefone
+        $(document).ready(function(){
+            $('#telefone').mask('(00) 0000-00009');
+        });
+    </script>
+</html>
