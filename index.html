@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Montserrat:wght@800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
 
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -22,7 +23,7 @@
         <div class="body">
             <div class="default-margin header">
                 <h1 class="header-text">We Care Movement</h1>
-                <img class="logo" src="/assets/wecare.svg">
+                <img class="logo" src="./assets/wecare.svg">
             </div>
             <div class="container">
                 <div class="default-margin">
@@ -36,13 +37,18 @@
                     <div class="card" style="background-image: url(./assets/areas/store.jpeg);background-repeat: no-repeat;background-size: cover;"></div>                
                     <div class="card" style="background-image: url(./assets/areas/kids.jpeg);background-repeat: no-repeat;background-size: cover;"></div>                
                     <div class="card" style="background-image: url(./assets/areas/uni.png);background-repeat: no-repeat;background-size: cover;"></div>                
+                    <div class="card" style="background-image: url(./assets/areas/school.jpeg);background-repeat: no-repeat;background-size: cover;"></div>                
                 </div>
             </div>
             <div class="default-margin container center">                
-                <h2>Eventos</h2>
-                <button id="visitante_btn" class="btn black-btn">sou visitante</button>
+                <h2>Próximos eventos</h2>
+                <div class="evento" onclick="abreLink('https:\/\/www.instagram.com/p/Cu0pmwbM-e8/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==')"></div>
             </div>
 
+            <div class="default-margin container center">                
+                <h2>Visitantes</h2>
+                <button id="visitante_btn" class="btn black-btn">sou visitante</button>
+            </div>
             <div class="default-margin container center">                
                 <h2>We Care na web</h2>
                 <button class="btn white-btn color-gradient" onclick="abreLink('https:\/\/www.instagram.com/wecaremvmnt/')"><span class='insta-icon'></span>@wecaremvmnt</button>
@@ -68,7 +74,7 @@
               </div>
 
             <div class="footer">
-                
+                <p class="text-footer">Built with &hearts; for His glory</p>
             </div>
         </div>
     </body>
