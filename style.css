@@ -8,14 +8,14 @@ body {
     margin: 0;
     min-height: 100%;
     background-color: #ffffff;
-    background-image: url("./assets/bkg_1.png");
+    background-image: url("./assets/bkg_1.webp");
     background-position: left top;
     background-repeat: no-repeat;
     background-size: auto;
 }
 
 .body{
-    background-image: url("./assets/bkg_3.png");
+    background-image: url("./assets/bkg_3.webp");
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: auto;
@@ -189,7 +189,7 @@ p{
 
 .evento{
     margin-top: 2em;
-    background-image: url(./assets/evento1.png);
+    background-image: url(./assets/evento1.webp);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1em;
